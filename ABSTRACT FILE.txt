@@ -1,0 +1,165 @@
+Clinic Appointment & Prescription Manager
+NAME: 
+1. Kaushal Palla (ROLL NO: 2620040065)
+2. Joshith NVS (ROLL NO: 2620030096)
+
+1. Project Abstract
+The Clinic Appointment & Prescription Manager is a software-based healthcare management system designed to streamline outpatient appointment scheduling, patient record tracking, and digital prescription generation. The system is designed to demonstrate how automated record-keeping and workflow automation improve daily clinic operations without necessitating complex enterprise infrastructure.
+The manager provides an intuitive interface where administrative staff and doctors can register patients, schedule and manage time slots, access patient medical histories, and issue structured electronic prescriptions with dosage and medication details. It automatically verifies doctor schedule availability, prevents overlapping bookings, and archives visit summaries.
+This project demonstrates key computing concepts including data validation, role-based interaction, conditional logic, file handling, and structured record management. It serves as an effective foundation for understanding hospital and clinical information systems (HIS/CIS).
+
+2. Advantages
+Easy to use: Provides a clean, menu-driven interface for booking appointments and generating prescriptions.
+Paperless records: Eliminates manual logbooks and physical prescription slips by maintaining digital entries.
+Conflict-free scheduling: Automatically validates doctor availability to eliminate overlapping time slots and double bookings.
+Comprehensive record tracking: Maintains centralized patient visit history, diagnoses, and medication logs.
+Structured prescription format: Standardizes dosage instructions, frequency, and duration to reduce medical errors.
+Error handling: Validates phone numbers, time slot inputs, patient IDs, and dosage formats.
+Cost-effective & lightweight: Runs efficiently on standard workstation hardware without expensive software licenses.
+Easy to modify: Can be expanded with specialized medical departments, diagnostic tests, and billing modules.
+
+3. Implementation Details
+Patient Registration: Collects and validates patient demographic data and assigns a unique Patient ID.
+Doctor Schedule Management: Displays available consultation slots and doctor specialties.
+Book Appointment: Matches patient requests with open time slots and checks for scheduling conflicts.
+Queue & Status Management: Tracks appointment progression (Scheduled, Completed, Cancelled).
+Consultation & Diagnosis Entry: Enables the physician to log symptoms, diagnostic findings, and clinical notes.
+Prescription Generation: Formats and issues structured prescription entries specifying drug name, dosage, and duration.
+Search & View Records: Allows searching of previous visit summaries and medical histories using Patient ID.
+Billing & Fee Calculation: Calculates consultation charges and produces an itemized summary for the visit.
+Data Persistence & Export: Saves patient records and prescriptions to local storage files for persistent access.
+
+4. Output Screenshots
+
+Output 1 – Main Menu
+============================================================
+           CLINIC APPOINTMENT & PRESCRIPTION MANAGER
+============================================================
+
+------------------------ MAIN MENU ------------------------
+1. Register New Patient
+2. Schedule Appointment
+3. View Daily Appointment Queue
+4. Doctor Consultation & Prescription
+5. View Patient Medical History
+6. Billing Summary
+7. Exit
+-----------------------------------------------------------
+Enter your choice: 
+
+Output 2 – Schedule Appointment
+Enter your choice: 2
+
+============================================================
+                  SCHEDULE AN APPOINTMENT
+============================================================
+Enter Patient ID: P-1024
+Patient Name    : Rahul Sharma
+Select Doctor   : Dr. Ananya Rao (Cardiology)
+
+Available Time Slots:
+[1] 10:00 AM - 10:30 AM (Available)
+[2] 10:30 AM - 11:00 AM (Available)
+[3] 11:00 AM - 11:30 AM (Booked)
+[4] 11:30 AM - 12:00 PM (Available)
+
+Select Slot ID: 2
+Appointment Confirmed! Token Number: C-14
+
+Output 3 – Successful Prescription Generation
+============================================================
+                  PRESCRIPTION ISSUED
+============================================================
+Patient ID     : P-1024
+Patient Name   : Rahul Sharma
+Doctor         : Dr. Ananya Rao
+Date           : 21-09-2026
+Diagnosis      : Mild Hypertension
+-----------------------------------------------------------
+Prescribed Medications:
+1. Tab. Amlodipine (5mg)      - 1-0-0 - 30 Days (After Food)
+2. Tab. Atorvastatin (10mg)   - 0-0-1 - 30 Days (Night)
+-----------------------------------------------------------
+Advice: Low salt diet, monitor BP weekly.
+Prescription saved successfully!
+============================================================
+
+Output 4 – Scheduling Conflict / Slot Unavailable
+Enter Slot ID: 3
+Error: Selected time slot (11:00 AM - 11:30 AM) is already booked!
+Please select an alternate available slot: 4
+Slot 11:30 AM - 12:00 PM reserved successfully.
+
+Output 5 – Invalid Patient ID Input
+Enter Patient ID: P-9999
+Error: Patient ID 'P-9999' not found in database!
+Would you like to register a new patient? (Y/N): 
+
+Output 6 – Prescription Search & Medical History
+============================================================
+                  PATIENT MEDICAL RECORD
+============================================================
+Patient ID     : P-1024
+Name           : Rahul Sharma | Age: 42 | Gender: Male
+Total Visits   : 2
+
+Visit 1: 15-08-2026 | Diagnosis: Routine Checkup
+Prescription: Multivitamins (Daily)
+
+Visit 2: 21-09-2026 | Diagnosis: Mild Hypertension
+Prescription: Tab. Amlodipine (5mg), Tab. Atorvastatin (10mg)
+============================================================
+
+Output 7 – Billing & Fee Summary
+============================================================
+                     VISIT INVOICE
+============================================================
+Invoice No     : INV-2026-088
+Patient ID     : P-1024
+Consultation   : ₹500.00
+Registration   : ₹100.00
+Total Payable  : ₹600.00
+Payment Status : Paid (Cash)
+============================================================
+
+Output 8 – Daily Clinic Summary
+============================================================
+                 DAILY CLINIC SUMMARY
+============================================================
+Total Registered Patients : 18
+Appointments Scheduled    : 14
+Consultations Completed   : 11
+Pending Appointments      : 3
+Total Revenue Collected   : ₹8,200.00
+============================================================
+
+Output 9 – Exit
+------------------------ MAIN MENU ------------------------
+1. Register New Patient
+2. Schedule Appointment
+3. View Daily Appointment Queue
+4. Doctor Consultation & Prescription
+5. View Patient Medical History
+6. Billing Summary
+7. Exit
+-----------------------------------------------------------
+Enter your choice: 7
+
+Thank you for using Clinic Appointment & Prescription Manager!
+
+5. Conclusion
+The Clinic Appointment & Prescription Manager successfully implements an efficient workflow for outpatient handling, appointment coordination, and electronic prescription generation. The software eliminates scheduling bottlenecks, minimizes administrative manual work, and ensures legible, structured clinical documentation.
+The project provides practical exposure to data validation, file and record persistence, relational record linkage between patients and doctors, and console interface design. While operating as a desktop/terminal management system, it establishes a solid architectural baseline for migration to full-scale web-based health information systems.
+
+6. Future Work
+The project can be enhanced in several ways:
+Add real-time SMS and email appointment reminders.
+Integrate QR-code digital prescription access for patients.
+Add a relational database (SQLite/MySQL) for scalable record management.
+Implement role-based logins for Receptionists, Doctors, and System Administrators.
+Add automated invoice and prescription PDF export.
+Integrate pharmacy and laboratory order handling.
+Connect with cloud sync for multi-branch clinic operations.
+Introduce an online patient self-booking web interface.
+Add drug-interaction alerts during prescription drafting.
+Improve the user interface with a modern web or desktop dashboard.
